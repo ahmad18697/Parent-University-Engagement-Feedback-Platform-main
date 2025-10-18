@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Databases (don’t copy local dev DBs into image)
+*.db
+
+# Git
+.git
+.gitignore
+
+# Docker configs
+.dockerignore
+docker-compose.override.yml
+docker-compose.override.*.yml
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Tests (if you don’t need them in the container)
+tests/
+
+# OS files
+.DS_Store
+Thumbs.db

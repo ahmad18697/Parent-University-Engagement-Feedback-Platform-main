@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title or "Feedback System" }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://kit.fontawesome.com/a2d9d5a4e4.js" crossorigin="anonymous"></script>
+
+  <!-- Page-specific CSS -->
+  <style>
+    /* ===== Header ===== */
+    header {
+      background-color: #0f172a; /* slate-900 */
+      color: #fff;
+      padding: 0.75rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      margin-left: 0.5rem;
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      line-height: 2.25rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 8px;
+      transition: color .15s ease, background-color .15s ease;
+    }
+
+    /* Bold only Home link */
+    nav a.home-link { font-weight: bold; }
+
+    nav a:hover { color: #ffffff; background-color: rgba(255,255,255,0.08); }
+
+    nav a.active {
+      color: #ffffff; /* Highlight current page */
+      background-color: rgba(255,87,34,0.25);
+      box-shadow: inset 0 -2px 0 0 #ff5722;
+    }
+
+    /* Admin button on right */
+    .admin-button { margin-left: auto; font-weight: 600; }
+
+    .admin-button:hover { color: #fff !important; }
+
+    main {
+      padding: 1rem 2rem;
+      background-color: #f5f7fa;
+      min-height: 80vh;
+    }
+
+    footer {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 2rem;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+    }
+
+    /* Buttons (general) */
+    button, .button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+    button:hover, .button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Brand link inside heading */
+    .brand {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .brand:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/" class="brand">Parent–University-Engagement</a></h1>
+    <nav>
+      <a href="/" class="home-link {% if request.url.path == '/' %}active{% endif %}"
+         aria-current="{% if request.url.path == '/' %}page{% endif %}">Home</a>
+      <a href="/feedback" class="admin-button {% if request.url.path.startswith('/feedback') %}active{% endif %}"
+         aria-current="{% if request.url.path.startswith('/feedback') %}page{% endif %}">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>&copy; {{ year }}</p>
+  </footer>
+</body>
+</html>
