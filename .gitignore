@@ -1,0 +1,161 @@
+
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+
+.env
+.env.*
+
+feedback.db
+*.sqlite3
+
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+.idea/
+.vscode/
+
+coverage/
+dist/
+build/
+
+# --- Operating systems ---
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# --- Node ---
+# dependencies
+node_modules/
+# build outputs
+dist/
+build/
+out/
+# runtime logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# env
+.env
+.env.local
+.env.*.local
+
+# --- Python ---
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+# Virtual envs
+venv/
+env/
+ENV/
+.venv/
+# pytest
+.pytest_cache/
+# IDE/Editor
+.python-version
+
+# --- Java / Maven / Gradle ---
+/target/
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+.build/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# --- JavaScript/TypeScript build / tooling ---
+# TypeScript cache
+*.tsbuildinfo
+# package lock files (optional to commit)
+# package-lock.json
+# pnpm-lock.yaml
+# yarn.lock
+
+# --- IDEs & Editors ---
+# VSCode
+.vscode/
+.history/
+# JetBrains (IntelliJ, WebStorm, PyCharm)
+.idea/
+*.iml
+# Sublime
+*.sublime-workspace
+*.sublime-project
+
+# --- Logs and temp files ---
+logs/
+*.log
+*.log.*
+tmp/
+temp/
+*.tmp
+.cache/
+.cache-loader/
+*.swp
+*~
+
+# --- Containers / VM ---
+.vagrant/
+docker-compose.override.yml
+.Dockerfile*
+
+# --- Coverage / test reports ---
+coverage/
+coverage.*.xml
+coverage-html/
+
+# --- Static assets / build artifacts ---
+public/build/
+public/static/
+assets/bundles/
+
+# --- OS metadata & Thumbs ---
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+
+# --- Secrets / credentials (also consider adding to global gitignore) ---
+# Private keys
+*.pem
+*.key
+
+# --- Misc common ---
+.idea/
+.vscode/
+.vscode-test/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.DS_Store
+
+# --- Example: Ignore files already tracked (note) ---
+# If a file is already tracked by Git, add it here then run:
+#   git rm --cached <file>
+# then commit the .gitignore
+
